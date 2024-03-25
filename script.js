@@ -42,32 +42,31 @@ function handleClick(event){
             currentOperationValue = "";
             break;
         case "equal":
-            if(currentOperationValue == "") break;
-            operand2 = displayValue;
-            displayValue = operate(operand1, operand2, operator);
-            currentOperationValue = "";
-            operand1 = 0;
-            operand2 = 0;   
+            resolve(); 
             break; 
         case "add":
+            if(currentOperationValue != "") resolve();
             operand1 = displayValue;
             operator = "+";
             currentOperationValue = operand1 + operator + "...";
             displayValue = "0";
             break;
         case "subtract":
+            if(currentOperationValue != "") resolve();
             operand1 = displayValue;
             operator = "-";
             currentOperationValue = operand1 + operator + "...";
             displayValue = "0";
             break; 
         case "multiply":
+            if(currentOperationValue != "") resolve();
             operand1 = displayValue;
             operator = "*";
             currentOperationValue = operand1 + operator + "...";
             displayValue = "0";
             break;
         case "divide":
+            if(currentOperationValue != "") resolve();
             operand1 = displayValue;
             operator = "/";
             currentOperationValue = operand1 + operator + "...";
@@ -123,6 +122,15 @@ function updateDisplay(){
     
     const currentOperation = document.querySelector(".currentOperation");
     currentOperation.textContent = currentOperationValue;
+}
+
+function resolve(){
+    if(currentOperationValue == "") return;
+    operand2 = displayValue;
+    displayValue = operate(operand1, operand2, operator);
+    currentOperationValue = "";
+    operand1 = 0;
+    operand2 = 0;  
 }
 
 // variables for app

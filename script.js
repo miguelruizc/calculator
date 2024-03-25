@@ -33,8 +33,25 @@ function operate (a, b, operator){
     }
 }
 
+function handleClick(event){
+    console.log(event.target.classList + " clicked!");
+}
+
+function initialize(){
+    const container = document.querySelector(".calculator");
+    const buttons = container.querySelectorAll("button");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", handleClick);
+    });
+}
+
+// Set event listeners
+initialize();
+
 // operands a & b, and operator 
 let a = 0;
 let b = 0;
 let operator = "";
+let displayValue = "";
 

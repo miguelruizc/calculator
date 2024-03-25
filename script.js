@@ -44,6 +44,14 @@ function handleClick(event){
         case "equal":
             resolve(); 
             break; 
+        case "backspace":
+            if(displayValue != "0") {
+                displayValue = displayValue.slice(0, -1)
+                if(displayValue == "") {
+                    displayValue = "0";
+                }
+            };
+            break;
         case "add":
             if(currentOperationValue != "") resolve();
             operand1 = displayValue;

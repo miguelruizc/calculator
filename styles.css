@@ -27,9 +27,11 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    max-width: 160px;
     height: 100px;
     margin: 0px 10px 10px 10px;
-    font-size: 50px;
+    font-size: 20px;
 }
 
 .controls{
@@ -45,7 +47,7 @@ button {
 }
 
 .controls > button {
-    flex: 1 0 50%;
+    flex: 1 0 33%;
     min-height: 50px;
 }
 

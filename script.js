@@ -119,7 +119,7 @@ function initialize(){
 function updateDisplay(){
     const screen = document.querySelector(".screen");
     screen.textContent = displayValue;
-    
+
     const currentOperation = document.querySelector(".currentOperation");
     currentOperation.textContent = currentOperationValue;
 }

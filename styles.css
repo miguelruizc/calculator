@@ -28,13 +28,8 @@ button {
     justify-content: center;
     align-items: center;
     height: 100px;
-    margin: 10px;
+    margin: 0px 10px 10px 10px;
     font-size: 50px;
-}
-
-.currentOperation {
-    background-color: black;
-    height: 20px;
 }
 
 .controls{
@@ -62,4 +57,13 @@ button {
 .operators > button {
     flex: 1 0 25%;
     min-height: 50px;
+}
+
+.calculator {
+    position: relative;
+}
+
+.currentOperation {
+    position: absolute;
+    pointer-events: none;
 }

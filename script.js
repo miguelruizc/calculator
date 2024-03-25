@@ -209,10 +209,19 @@ document.addEventListener("keydown", function(event){
             button = document.querySelector(".divide");
             button.click(); 
             break;
-        case "Backspace":
+        case "Delete":
             button = document.querySelector(".clear");
             button.click(); 
             break;
+        case "Backspace":
+            button = document.querySelector(".backspace");
+            button.click(); 
+            break;
+        case ".":
+            button = document.querySelector(".digitDot");
+            button.click(); 
+            break;
+        
         default: 
             break;
     }

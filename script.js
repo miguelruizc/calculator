@@ -42,13 +42,12 @@ function handleClick(event){
             currentOperationValue = "";
             break;
         case "equal":
-            if(operand1 != 0){
-                operand2 = displayValue;
-                displayValue = operate(operand1, operand2, operator);
-                currentOperationValue = "";
-                operand1 = 0;
-                operand2 = 0;
-            }
+            if(currentOperationValue == "") break;
+            operand2 = displayValue;
+            displayValue = operate(operand1, operand2, operator);
+            currentOperationValue = "";
+            operand1 = 0;
+            operand2 = 0;   
             break; 
         case "add":
             operand1 = displayValue;

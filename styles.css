@@ -32,6 +32,11 @@ button {
     font-size: 50px;
 }
 
+.currentOperation {
+    background-color: black;
+    height: 20px;
+}
+
 .controls{
     display: flex;
     flex-wrap: wrap;

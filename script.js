@@ -1,17 +1,17 @@
 function add (a, b){
-    return a + b;
+    return parseInt(a) + parseInt(b);
 }
 
 function subtract (a, b){
-    return a - b;
+    return parseInt(a) - parseInt(b);
 }
  
 function multiply (a, b){
-    return a * b;
+    return parseInt(a) * parseInt(b);
 }
 
 function divide (a, b){
-    return a / b;
+    return parseInt(a) / parseInt(b);
 }
 
 function operate (a, b, operator){
@@ -37,21 +37,42 @@ function handleClick(event){
     switch(event.target.className){
         case "clear":
             displayValue = "0";
+            operand1 = 0;
+            operand2 = 0;
+            currentOperationValue = "";
             break;
         case "equal":
-            console.log("equal clicked");
+            if(operand1 != 0){
+                operand2 = displayValue;
+                displayValue = operate(operand1, operand2, operator);
+                currentOperationValue = "";
+                operand1 = 0;
+                operand2 = 0;
+            }
             break; 
         case "add":
-            console.log("sum clicked");
+            operand1 = displayValue;
+            operator = "+";
+            currentOperationValue = operand1 + operator + "...";
+            displayValue = "0";
             break;
         case "subtract":
-            console.log("sub clicked");
+            operand1 = displayValue;
+            operator = "-";
+            currentOperationValue = operand1 + operator + "...";
+            displayValue = "0";
             break; 
         case "multiply":
-            console.log("mul clicked");
+            operand1 = displayValue;
+            operator = "*";
+            currentOperationValue = operand1 + operator + "...";
+            displayValue = "0";
             break;
         case "divide":
-            console.log("div clicked");
+            operand1 = displayValue;
+            operator = "/";
+            currentOperationValue = operand1 + operator + "...";
+            displayValue = "0";
             break; 
         case "digit0":
             (displayValue == "0") ? (displayValue = "0") : (displayValue += "0");
@@ -100,13 +121,17 @@ function initialize(){
 function updateDisplay(){
     const screen = document.querySelector(".screen");
     screen.textContent = displayValue;
+    
+    const currentOperation = document.querySelector(".currentOperation");
+    currentOperation.textContent = currentOperationValue;
 }
 
 // variables for app
-let a = 0;
-let b = 0;
+let operand1 = 0;
+let operand2 = 0;
 let operator = "";
 let displayValue = "0";
+let currentOperationValue = "";
 
 // Initialize 
 initialize();

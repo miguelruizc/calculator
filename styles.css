@@ -2,6 +2,48 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: black;
     color: white;
+    text-align: center;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    background-color: black;
+}
+
+.calculator {
+    background-color: gold;
+    padding: 10px;
+    width: 200px;
+}
+
+.screen {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin: 10px;
+}
+
+.digits,
+.operators {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.digits > button {
+    flex: 1 0 33%;
+    min-height: 50px;
+}
+
+.operators > button {
+    flex: 1 0 25%;
+    min-height: 50px;
 }

@@ -23,10 +23,10 @@ function operate (a, b, operator){
             return subtract(a, b);
             break;
         case "*":
-            return multiply(a,b);
+            return multiply(a, b);
             break;
         case "/":
-            return divide(a,b);
+            return divide(a, b);
             break;
         default: 
             return "Invalid operator";
@@ -37,5 +37,4 @@ function operate (a, b, operator){
 let a = 0;
 let b = 0;
 let operator = "";
-
 

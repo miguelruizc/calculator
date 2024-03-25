@@ -34,7 +34,58 @@ function operate (a, b, operator){
 }
 
 function handleClick(event){
-    console.log(event.target.classList + " clicked!");
+    switch(event.target.className){
+        case "clear":
+            displayValue = "0";
+            break;
+        case "equal":
+            console.log("equal clicked");
+            break; 
+        case "add":
+            console.log("sum clicked");
+            break;
+        case "subtract":
+            console.log("sub clicked");
+            break; 
+        case "multiply":
+            console.log("mul clicked");
+            break;
+        case "divide":
+            console.log("div clicked");
+            break; 
+        case "digit0":
+            displayValue += "0";
+            break;
+        case "digit1":
+            displayValue += "1";
+            break; 
+        case "digit2":
+            displayValue += "2";
+            break;
+        case "digit3":
+            displayValue += "3";
+            break; 
+        case "digit4":
+            displayValue += "4";
+            break;
+        case "digit5":
+            displayValue += "5";
+            break;
+        case "digit6":
+            displayValue += "6";
+            break;
+        case "digit7":
+            displayValue += "7";
+            break; 
+        case "digit8":
+            displayValue += "8";
+            break;
+        case "digit9":
+            displayValue += "9";
+            break; 
+    } 
+
+    console.log(displayValue);
 }
 
 function initialize(){

@@ -133,6 +133,81 @@ function resolve(){
     operand2 = 0;  
 }
 
+function initializeKeyboardSupport() {
+document.addEventListener("keydown", function(event){
+    let button = {};
+
+    switch(event.key){
+        case "0":
+            button = document.querySelector(".digit0");
+            button.click(); 
+            break;
+        case "1":
+            button = document.querySelector(".digit1");
+            button.click(); 
+            break;
+        case "2":
+            button = document.querySelector(".digit2");
+            button.click(); 
+            break;
+        case "3":
+            button = document.querySelector(".digit3");
+            button.click(); 
+            break;
+        case "4":
+            button = document.querySelector(".digit4");
+            button.click(); 
+            break;
+        case "5":
+            button = document.querySelector(".digit5");
+            button.click(); 
+            break;
+        case "6":
+            button = document.querySelector(".digit6");
+            button.click(); 
+            break;
+        case "7":
+            button = document.querySelector(".digit7");
+            button.click(); 
+            break;
+        case "8":
+            button = document.querySelector(".digit8");
+            button.click(); 
+            break;
+        case "9":
+            button = document.querySelector(".digit9");
+            button.click(); 
+            break;
+        case "Enter":
+            button = document.querySelector(".equal");
+            button.click(); 
+            break;
+        case "+":
+            button = document.querySelector(".add");
+            button.click(); 
+            break;
+        case "-":
+            button = document.querySelector(".subtract");
+            button.click(); 
+            break;
+        case "*":
+            button = document.querySelector(".multiply");
+            button.click(); 
+            break;
+        case "/":
+            button = document.querySelector(".divide");
+            button.click(); 
+            break;
+        case "Backspace":
+            button = document.querySelector(".clear");
+            button.click(); 
+            break;
+        default: 
+            break;
+    }
+})
+}
+
 // variables for app
 let operand1 = 0;
 let operand2 = 0;
@@ -142,4 +217,7 @@ let currentOperationValue = "";
 
 // Initialize 
 initialize();
+initializeKeyboardSupport();
 updateDisplay();
+
+

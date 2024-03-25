@@ -1,17 +1,17 @@
 function add (a, b){
-    return parseInt(a) + parseInt(b);
+    return parseFloat(a) + parseFloat(b); 
 }
 
 function subtract (a, b){
-    return parseInt(a) - parseInt(b);
+    return parseFloat(a) - parseFloat(b);
 }
  
 function multiply (a, b){
-    return parseInt(a) * parseInt(b);
+    return parseFloat(a) * parseFloat(b);
 }
 
 function divide (a, b){
-    return parseInt(a) / parseInt(b);
+    return parseFloat(a) / parseFloat(b);
 }
 
 function operate (a, b, operator){
@@ -72,6 +72,9 @@ function handleClick(event){
             currentOperationValue = operand1 + operator + "...";
             displayValue = "0";
             break; 
+        case "digitDot":
+            if(!displayValue.includes(".")) {displayValue += "."};
+            break;
         case "digit0":
             (displayValue == "0") ? (displayValue = "0") : (displayValue += "0");
             break;
